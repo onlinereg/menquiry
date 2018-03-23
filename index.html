@@ -1,3 +1,188 @@
-<html>
-<h1>It Works </h1>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Online Course Registration">
+    <meta name="author" content="Admin">
+
+    <title>Online Course</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Online Course Registration</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" id = "Signuppop"href ="#masthed">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" id = "Signinpop" href ="#masthed">Sign in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Footer">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead" id="masthed">
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in">Welcome To Online Course Registration!</div>
+          <div class="intro-heading text-uppercase ">It's Nice To Meet You</div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger topBtn" href="#About">Tell Me More</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Services -->
+    <section id="About">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">About</h2>
+            <h3 class="section-subheading text-muted">Best Online Courses.</h3>
+          </div>
+        </div>
+        <div class="row text-center">
+		   <h3 class="content section-subheading text-muted">There are several problems with the traditional system of education. First of all, you need to pay thousands of dollars per term to attend a prestigious school. With all those budget cuts, busy classrooms, and course shortages, you won’t always get the chance to study exactly what you want.</br></br>
+It’s no wonder why millions of students from all around the world opt for online degree programs or take at least one college course through an online platform.Online learning has to be the greatest revolution in contemporary education. It made a huge change in the system and opened great opportunities for everyone who wants to learn something.</br></br>
+Nevertheless, online education is still related to stereotypes. People often think that online students are not smart enough for a traditional college or university, they are lazy, and they don’t get “real” degrees. These claims discourage many people from taking online courses, so they get stuck in the traditional educational system that consumes a huge deal of money, nerves, and years of their lives but We have advantages of online learning that will make you reconsider your attitude towards this type of education.</h3>
+        </div>
+      </div>
+    </section>
+
+   
+   <!-- Popup Container -->
+   <div class="popup_container animate displayNone" id="id01"  >
+  <form class="modal-content" action="http://127.0.0.1:3000/" method="post">
+  <span class="close" title="Close Modal">&times;</span>
+    <div class="container">
+      <p>Create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+	  
+	  <label for="psw"><b>PIN</b></label>
+      <input type="password" placeholder="Enter 4 Digit Pin" name="pin" required>
+	  
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button"  class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="popupin_container animate displayNone" id="id02">
+  <form class="modal-content" action="/description.html">
+  <span class="close" title="Close Modal">&times;</span>
+    <div class="container">
+      <p>Login to your account.</p>
+      <hr>
+      <label for="token"><b>Easy Login</b></label>
+      <input type="text" placeholder="Enter PIN" name="token" required>
+      <div class="clearfix">
+        <button type="button"class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn" id ="signin">Sign In</button>
+      </div>
+    </div>
+  </form>
+</div>
+   
+    <!-- Footer -->
+    <footer>
+      <div class="container" id="Footer">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright"><a>Copyright &copy; Deepa Online Course 2018</a></span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+              <li class="list-inline-item">
+                <a href="#">Coimbatore</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Tamilnadu</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+   
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+	
+	<!-- Proxy Template scripts for this template -->
+	<script src="js/proxyhome.js"></script>
+
+  </body>
+
 </html>
