@@ -694,7 +694,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #fed136;
 }
-.popup_container, .popupin_container
+.popup_container, .popupin_container, .Spopup_container
 {
 	width: 730px;
     height: 100px;
@@ -849,7 +849,7 @@ hr {
 }
 
 @media only screen and (max-width: 600px) {
- .popup_container, .popupin_container{
+ .popup_container, .popupin_container, .Spopup_container{
      width:100%;
 	 left: 350px;
 	 top:30%
@@ -864,4 +864,24 @@ hr {
  {
 	  width:100%;
 }
+}
+
+.Specialclose {
+    /* font-size: 40px; */
+    font-weight: bold;
+    color: #000;
+    /* margin-left: 540px; */
+    display: block !important;
+	cursor:pointer !important;
+	
+}
+
+.errorBtn
+{
+	border: 1px solid red !important;
+}
+
+#username
+{
+	text-transform:capitalize !important;
 }
