@@ -37,6 +37,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
+		  <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" id="username"></a>
+            </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Readings</a>
             </li>
@@ -44,7 +47,7 @@
               <a class="nav-link js-scroll-trigger" href="#Footer">Contact</a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="./index.html">Logout</a>
+              <a class="nav-link js-scroll-trigger" href="./index.html" id="deleteCookie">Logout</a>
             </li>
           </ul>
         </div>
@@ -56,7 +59,7 @@
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in">Register Your Online Course Here!</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger topBtn" id="Register" href="https://docs.google.com/forms/d/e/1FAIpQLSdvjHSkm8Jn01nOyIVQw5fTeWwhsFM4t4ITIql5WhKEMpn3dQ/viewform?embedded=true">Click Me</a>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger topBtn" id="Register" href="https://docs.google.com/forms/d/e/1FAIpQLSdvjHSkm8Jn01nOyIVQw5fTeWwhsFM4t4ITIql5WhKEMpn3dQ/viewform?embedded=true"  target="_blank">Click Me</a>
         </div>
       </div>
     </header>
@@ -218,8 +221,8 @@
                   <h2 class="text-uppercase">Java</h2>
                   <p class="item-intro text-muted">Learn Java Basics.</p>
 				  <video width="320" height="240" controls>
-					  <source src="./videos/videoj.mp4" type="video/mp4">
-					  <source src="./videos/videoj.mp4" type="video/ogg">
+					  <source src="./videos/video1.mp4" type="video/mp4">
+					  <source src="./videos/video1.mp4" type="video/ogg">
 					  Your browser does not support the video tag.
 				</video>
                   <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt=""> -->
@@ -252,8 +255,8 @@
                   <h2 class="text-uppercase">HTML & CSS</h2>
                   <p class="item-intro text-muted">Learn how to Draw a Circle.</p>
 				  <video width="320" height="240" controls>
-					  <source src="./videos/videoh.mp4" type="video/mp4">
-					  <source src="./videos/videoh.mp4" type="video/ogg">
+					  <source src="./videos/video1.mp4" type="video/mp4">
+					  <source src="./videos/video1.mp4" type="video/ogg">
 					  Your browser does not support the video tag.
 					</video>
                   <p>CSS is the language for describing the presentation of Web pages, including colors, layout, and fonts. It allows one to adapt the presentation to different types of devices, such as large screens, small screens, or printers. CSS is independent of HTML and can be used with any XML-based markup language.</p>
@@ -285,8 +288,8 @@
                   <h2 class="text-uppercase">Node JS</h2>
                   <p class="item-intro text-muted">Learn node js from online tutorial now.</p>
                    <video width="320" height="240" controls>
-					  <source src="./videos/videoj.mp4" type="video/mp4">
-					  <source src="./videos/videoj.mp4" type="video/ogg">
+					  <source src="./videos/video1.mp4" type="video/mp4">
+					  <source src="./videos/video1.mp4" type="video/ogg">
 					  Your browser does not support the video tag.
 					</video
                   <p>Node.js (Node) is an open source development platform for executing JavaScript code server-side. Instead, Node processes incoming requests in a constant event stack and sends small requests one after the other without waiting for responses.</p>
@@ -318,8 +321,8 @@
                   <h2 class="text-uppercase">PHP</h2>
                   <p class="item-intro text-muted">How Technology Evolve.</p>
                  <video width="320" height="240" controls>
-					  <source src="./videos/videop.mp4" type="video/mp4">
-					  <source src="./videos/videop.mp4" type="video/ogg">
+					  <source src="./videos/video1.mp4" type="video/mp4">
+					  <source src="./videos/video1.mp4" type="video/ogg">
 					  Your browser does not support the video tag.
 					</video>
                   <p>Information technology is concerned with improvements in a variety of human and organizational problem-solving endeavors, through the design, development and use of technologically based systems and processes that enhance the efficiency and effectiveness of information in a variety of strategic, tactical</p>
@@ -350,8 +353,8 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">C Programming</h2>
 				  <video width="320" height="240" controls>
-					  <source src="./videos/videoc.mp4" type="video/mp4">
-					  <source src="./videos/videoc.mp4" type="video/ogg">
+					  <source src="./videos/video1.mp4" type="video/mp4">
+					  <source src="./videos/video1.mp4" type="video/ogg">
 					  Your browser does not support the video tag.
 					</video>
                   <p class="item-intro text-muted">Learn C Basics from this tutorial.</p>
@@ -384,8 +387,8 @@
                   <h2 class="text-uppercase">Os </h2>
                   <p class="item-intro text-muted">Learn Operating System.</p>
                   <video width="320" height="240" controls>
-					  <source src="./videos/videop.mp4" type="video/mp4">
-					  <source src="./videos/videop.mp4" type="video/ogg">
+					  <source src="./videos/video1.mp4" type="video/mp4">
+					  <source src="./videos/video1.mp4" type="video/ogg">
 					  Your browser does not support the video tag.
 				</video>
                   <p>An operating system (OS) is the program that, after being initially loaded into the computer by a boot program, manages all the other programs in a computer. ... The application programs make use of the operating system by making requests for services through a defined application program interface (API).</p>
@@ -402,6 +405,7 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
+	 <script src="vendor/jquery/jquery.cookie.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
@@ -414,6 +418,9 @@
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
 
+	 <!-- Cookie CDN -->
+	
+	
 	<!-- Proxy Template scripts for this template -->
 	<script src="js/proxyhome.js"></script>
 	
