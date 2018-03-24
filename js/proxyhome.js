@@ -164,9 +164,12 @@ $(document).ready(function(){
 				  if(UserData[a].pin == EnterData)
 				  {
 					  console.log("Match Found "+UserData[a].name);
+					  $('input[type=text]').removeClass('errorBtn');
+						$('input[type=password]').removeClass('errorBtn');
 					  LoggerName = UserData[a].name;
 					  $.cookie("Username", LoggerName);
 					  window.location.href = "./description.html";
+					  return;
 					  
 				  }
 				  else
@@ -186,13 +189,4 @@ $(document).ready(function(){
 			 	  	  
 	});
 		
-		/*var url = "https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=1fJOSaqX9dSagCQJF09drAiheRiaJ9oYT43_upL0RjbY&sheet=login";
-		$.ajax({
-			url:url,
-			dataType:"jsonp",
-			success:function(data) {
-				console.log(data);
-				console.log(data.login[0].pin);
-			},
-		});*/
 });
