@@ -958,3 +958,7 @@ hr {
 	opacity:0.5;
 }
 
+.modal-content
+{
+	width: 100%;
+}
