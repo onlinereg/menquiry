@@ -1,6 +1,14 @@
 $(document).ready(function(){
-	
-		$('#username').text("Welcome "+ $.cookie("Username"));
+		var nameofper = "";
+		 nameofper = $.cookie("Username");
+	    if(nameofper != undefined)
+		{
+		$('#username').text("Welcome "+ $.cookie("Username")+",");
+		}
+		else
+		{
+			$('#username').text("Welcome Buddy,");
+		}
 			
 		$('#deleteCookie').on("click", function(){
 			$.removeCookie("Username");
@@ -46,6 +54,14 @@ $(document).ready(function(){
 			$(this).removeClass('errorBtn');
 		});
 		
+		$('input[name=email]').on("click", function(){
+			$(this).removeClass('errorBtn');
+		});
+		
+		$('input[name=name]').on("click", function(){
+			$(this).removeClass('errorBtn');
+		});
+		
 		//var $form = $('form#Signinmodel')
 		
 
@@ -55,6 +71,36 @@ $(document).ready(function(){
 			var name = $('input[name=name]').val();
 		    var pin = $('input[name=pin]').val();
 			
+			
+			//field Validation
+			  function validateEmail($email) {
+				  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+				  return emailReg.test( $email );
+				}	
+				
+				if((email.length < 1) || (!validateEmail(email)))
+				{
+					$('input[name=email]').attr("placeholder", "Please Enter Valid Email");
+					$('input[name=email]').addClass('errorBtn');
+					return;
+				}
+				
+				 if( name == ''  || name == "null") {
+                // Your code to handle error
+					$('input[name=name]').attr("placeholder", "Please Enter Valid name");
+					$('input[name=name]').addClass('errorBtn');
+					return;
+				} 
+				
+				if ((/^\d+$/.test(pin)) && pin.length > 4 ) {
+            // Contain numbers only
+			       $('input[name=password]').attr("placeholder", "Please Enter Valid pin");
+				   $('input[type=password]').addClass('errorBtn');
+				   return;
+				}
+			
+			$('.loader_container').css("display","block");
+			$('.loader').css("display","block");
 			var url = "https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=1fJOSaqX9dSagCQJF09drAiheRiaJ9oYT43_upL0RjbY&sheet=login";
 			$.ajax({
 				url:url,
@@ -69,7 +115,7 @@ $(document).ready(function(){
 					  {
 						  if(UserData[a].pin == pin)
 						  {
-							$('input[type=text]').addClass('errorBtn');
+							$('input[name=password]').attr("placeholder", "Please Choose different pin");
 							$('input[type=password]').addClass('errorBtn');
 							return;
 						  }
@@ -90,12 +136,18 @@ $(document).ready(function(){
 				  }
 				  });			
 				},
+				complete: function(){
+				$('.loader_container').css("display","none");
+				$('.loader').css("display","none");
+			  }
 			});	
 		});
 		
 		 var LoggerName;
 		$('#signin').on('click', function(e) {
 		  e.preventDefault();
+		  $('.loader_container').css("display","block");
+		  $('.loader').css("display","block");
 		  var url = "https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=1fJOSaqX9dSagCQJF09drAiheRiaJ9oYT43_upL0RjbY&sheet=login";
 		$.ajax({
 			url:url,
@@ -125,7 +177,11 @@ $(document).ready(function(){
 			  }
 			  
 			//  $('#username').text("Welcome "+LoggerName+",");
-			}
+			},
+			complete: function(){
+				$('.loader_container').css("display","none");
+				$('.loader').css("display","none");
+			  }
 		});
 			 	  	  
 	});
