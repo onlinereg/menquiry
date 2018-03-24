@@ -85,14 +85,14 @@ $(document).ready(function(){
 					return;
 				}
 				
-				 if( name == ''  || name == "null") {
+				 if( (name == '')  || (name == "null") || (name == undefined)) {
                 // Your code to handle error
 					$('input[name=name]').attr("placeholder", "Please Enter Valid name");
 					$('input[name=name]').addClass('errorBtn');
 					return;
 				} 
 				
-				if ((/^\d+$/.test(pin)) && pin.length > 4 ) {
+				if ((!(/^\d+$/.test(pin))) || (pin.length > 4) || (pin.length < 1)) {
             // Contain numbers only
 			       $('input[name=password]').attr("placeholder", "Please Enter Valid pin");
 				   $('input[type=password]').addClass('errorBtn');
