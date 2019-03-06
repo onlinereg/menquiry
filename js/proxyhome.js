@@ -144,36 +144,6 @@ $(document).ready(function(){
 		});
 		
 		 var LoggerName;
-	
-	$('#signin').on('click', function(e) {
-		  e.preventDefault();
-		  $('.loader_container').css("display","block");
-		  $('.loader').css("display","block");
-		var EnterData = $('input[name=token]').val();
-		if( EnterData = "1234" || EnterData = "2424" || EnterData = "1423")
-				  {
-					  
-					  $('input[type=text]').removeClass('errorBtn');
-						$('input[type=password]').removeClass('errorBtn');
-					  if(EnterData ="1234" )
-						{
-					       LoggerName = "poorni";
-						}
-						else
-						{
-							LoggerName = "Admin User";
-						}
-					  $.cookie("Username", LoggerName);
-					  window.location.href = "./description.html";
-					  return;
-					  
-				  }
-				  else
-				  {
-						$('input[type=text]').addClass('errorBtn');
-						$('input[type=password]').addClass('errorBtn');
-				  }
-	}
 		$('#signin').on('click', function(e) {
 		  e.preventDefault();
 		  $('.loader_container').css("display","block");
